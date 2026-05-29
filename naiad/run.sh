@@ -1,16 +1,35 @@
 #!/usr/bin/env sh
 set -e
 
-# Map the add-on option `log_level` to Naiad's LOG_LEVEL env var. The Supervisor
-# writes the chosen options to /data/options.json. We default to "info" if the file
-# or key is missing, and uppercase it for Python's logging level names.
+# The Supervisor writes the chosen add-on options to /data/options.json. Read them
+# with a tiny Python helper (jq isn't in the base image) and map them to the env
+# vars Naiad expects.
 OPTIONS_FILE="/data/options.json"
-LOG_LEVEL="info"
-if [ -f "${OPTIONS_FILE}" ]; then
-    LOG_LEVEL="$(python -c "import json; print(json.load(open('${OPTIONS_FILE}')).get('log_level', 'info'))" 2>/dev/null || echo info)"
-fi
+
+read_option() {
+    # read_option <key> <default>
+    if [ -f "${OPTIONS_FILE}" ]; then
+        python -c "import json,sys; print(json.load(open('${OPTIONS_FILE}')).get('${1}', '${2}'))" 2>/dev/null || echo "${2}"
+    else
+        echo "${2}"
+    fi
+}
+
+# log_level → LOG_LEVEL (uppercased for Python's logging level names).
+LOG_LEVEL="$(read_option log_level info)"
 LOG_LEVEL="$(echo "${LOG_LEVEL}" | tr '[:lower:]' '[:upper:]')"
 export LOG_LEVEL
+
+# password → NAIAD_PASSWORD_HASH. Naiad keeps the app password out of its database
+# (env-only); in the add-on there are no env vars to set, so this option is how you
+# protect the direct port. The value may be plaintext or a bcrypt hash ($2b$...) —
+# Naiad accepts both. Left empty: the sidebar still works via HA ingress trust, but
+# the direct port stays locked until a password is set.
+PASSWORD="$(read_option password "")"
+if [ -n "${PASSWORD}" ]; then
+    export NAIAD_PASSWORD_HASH="${PASSWORD}"
+    echo "[naiad] app password configured from add-on options"
+fi
 
 echo "[naiad] starting Home Assistant add-on (LOG_LEVEL=${LOG_LEVEL})"
 
