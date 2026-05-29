@@ -1,0 +1,32 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  addon-lint:
+    name: Add-on linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Home Assistant add-on linter
+        uses: frenck/action-addon-linter@v2
+        with:
+          path: ./naiad
+
+  hadolint:
+    name: Dockerfile lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hadolint
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: naiad/Dockerfile
+          # BUILD_FROM is supplied by the Supervisor build; ignore the pinned-tag hint.
+          ignore: DL3006
