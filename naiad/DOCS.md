@@ -44,7 +44,8 @@ The add-on is reachable two ways at once:
   under the add-on's **Network** settings.
 
   The direct port does **not** sit behind Home Assistant authentication, so Naiad's
-  own password protection applies there. Configure it in Naiad's settings.
+  own password protection applies there. Set the `password` option (below) to
+  protect it; until then the direct port stays locked.
 
 ## Configuration
 
@@ -55,6 +56,7 @@ the database on the `/data` volume.
 | Option | Default | Description |
 |--------|---------|-------------|
 | `log_level` | `info` | Backend log verbosity: `trace`, `debug`, `info`, `notice`, `warning`, `error`, `fatal`. |
+| `password` | _(empty)_ | App password for **direct-port** access (`http://<haos-ip>:5195`). Plaintext or a bcrypt hash (`$2b$…`). The sidebar (ingress) is authenticated by Home Assistant and needs no password. Leave empty to keep the direct port locked. Naiad stores the password env-only, so this option is the way to set it inside the add-on. |
 
 On a first start with an empty database, Naiad comes up zero-config: open the UI
 and add your sensors, zones and sequences. If a `config.yaml` is present in the
