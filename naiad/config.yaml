@@ -8,9 +8,8 @@ url: https://github.com/Neffez/naiad
 arch:
   - amd64
   - aarch64
+# Our base image has no s6/init of its own; run.sh is the entrypoint directly.
 init: false
-startup: application
-boot: auto
 
 # Ingress: served in the HA sidebar under /api/hassio_ingress/<token>/ (handled by
 # the runtime base-path detection added in Phase 6b). ingress_port is the in-container
@@ -33,9 +32,8 @@ ports_description:
 # using the auto-provided SUPERVISOR_TOKEN — no long-lived access token needed.
 homeassistant_api: true
 
-# SQLite database and optional config.yaml seed persist on the mapped data volume.
-map:
-  - data:rw
+# The SQLite database and optional config.yaml seed live under /data, which the
+# Supervisor always provides to add-ons (no `map` entry needed).
 
 options:
   log_level: info
