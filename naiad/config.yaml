@@ -1,0 +1,43 @@
+name: Naiad
+version: "0.1.0"
+slug: naiad
+description: Garden irrigation controller for Home Assistant, optimized for KNX
+url: https://github.com/Neffez/naiad
+# Naiad publishes a multi-arch app image; the add-on layers only the bootstrap on
+# top of it (see build.yaml), so the same image powers standalone and add-on.
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: application
+boot: auto
+
+# Ingress: served in the HA sidebar under /api/hassio_ingress/<token>/ (handled by
+# the runtime base-path detection added in Phase 6b). ingress_port is the in-container
+# port uvicorn listens on.
+ingress: true
+ingress_port: 8080
+panel_icon: mdi:sprinkler-variant
+panel_title: Naiad
+
+# Optional direct port, in addition to ingress, so the add-on is also reachable on
+# the HAOS host IP (http://<haos-ip>:5195) — e.g. a phone on the LAN without going
+# through HA. 8080 is often already taken on HAOS, so the default host port is 5195.
+# The user can disable or remap this in the add-on's Network settings.
+ports:
+  8080/tcp: 5195
+ports_description:
+  8080/tcp: Direct web access (in addition to the sidebar). Password auth applies here.
+
+# Reach Home Assistant Core through the Supervisor proxy (ws://supervisor/core/websocket)
+# using the auto-provided SUPERVISOR_TOKEN — no long-lived access token needed.
+homeassistant_api: true
+
+# SQLite database and optional config.yaml seed persist on the mapped data volume.
+map:
+  - data:rw
+
+options:
+  log_level: info
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?

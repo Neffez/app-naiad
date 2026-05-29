@@ -1,0 +1,12 @@
+# The add-on builds FROM the published multi-arch Naiad app image (one image, two
+# modes — see Phase 6c). The add-on Dockerfile only adds the Supervisor bootstrap.
+# Docker pulls the architecture-matching layer from the multi-arch manifest, so the
+# same tag works for both amd64 and aarch64.
+build_from:
+  amd64: ghcr.io/neffez/naiad:latest
+  aarch64: ghcr.io/neffez/naiad:latest
+labels:
+  org.opencontainers.image.title: Naiad
+  org.opencontainers.image.description: Garden irrigation controller for Home Assistant
+  org.opencontainers.image.source: https://github.com/Neffez/naiad
+  org.opencontainers.image.licenses: MIT
