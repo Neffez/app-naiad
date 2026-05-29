@@ -1,5 +1,5 @@
 name: Naiad
-version: "0.1.1"
+version: "0.1.2"
 slug: naiad
 description: Garden irrigation controller for Home Assistant, optimized for KNX
 url: https://github.com/Neffez/naiad
@@ -37,5 +37,9 @@ homeassistant_api: true
 
 options:
   log_level: info
+  password: ""
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  # App password for direct-port access. Plaintext or a bcrypt hash ($2b$...).
+  # The sidebar (ingress) needs no password; this protects http://<haos-ip>:5195.
+  password: password?

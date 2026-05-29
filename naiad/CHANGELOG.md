@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2
+
+- Add a `password` add-on option. Naiad keeps the app password env-only, and the
+  add-on has no env vars to set, so this is how you protect direct-port access
+  (`http://<haos-ip>:5195`). Plaintext or a bcrypt hash; the sidebar (ingress)
+  needs no password. `run.sh` exports it as `NAIAD_PASSWORD_HASH`.
+
 ## 0.1.1
 
 - Remove the custom AppArmor profile: it blocked the Python interpreter from
