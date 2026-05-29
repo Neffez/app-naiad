@@ -1,9 +1,8 @@
-ARG BUILD_FROM
-FROM ${BUILD_FROM}
-
-# BUILD_FROM is the published multi-arch Naiad app image (see build.yaml). We add
-# only the add-on bootstrap on top, so a single image powers both the standalone
-# container and the Home Assistant add-on.
+# The add-on runs the published multi-arch Naiad app image directly; Docker pulls
+# the architecture-matching variant from the manifest, so a single FROM covers
+# amd64 and aarch64. The add-on layers only the Supervisor bootstrap on top, so one
+# image powers both the standalone container and the Home Assistant add-on.
+FROM ghcr.io/neffez/naiad:latest
 
 # Persist the SQLite database (and an optional config.yaml seed) on the mapped
 # /data volume the Supervisor provides.

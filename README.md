@@ -40,7 +40,7 @@ See [`naiad/DOCS.md`](naiad/DOCS.md) for full add-on documentation.
 
 ```
 ghcr.io/neffez/naiad   (multi-arch app image, built by the naiad repo CI)
-        │  build_from
+        │  FROM (multi-arch manifest → matching arch)
         ▼
   naiad/Dockerfile     (adds the Supervisor bootstrap: run.sh, /data, log_level)
         │
