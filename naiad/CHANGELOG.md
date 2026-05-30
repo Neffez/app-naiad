@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.16 (2026-05-30)
+
+- fix: dynamic season icon (sun in summer, snowflake in winter)
+
 ## 0.1.15 (2026-05-30)
 
 - fix: weather strip icons-only, season shows Summer/Winter
