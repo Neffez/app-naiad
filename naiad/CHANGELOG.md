@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8 (2026-05-30)
+
+- feat(notify): test-notification button + clearer notify logging
+
 ## 0.1.5 (2026-05-30)
 
 - feat(config): searchable picker for notify targets
