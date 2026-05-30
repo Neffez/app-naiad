@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.9 (2026-05-30)
+
+- fix: code-review quick wins (plan tz, week consistency, factor/duration bounds)
+- docs: fresh code review — findings on liter accounting, auth, scheduling
+
 ## 0.1.8 (2026-05-30)
 
 - feat(notify): test-notification button + clearer notify logging
