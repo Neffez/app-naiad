@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.23 (2026-05-30)
+
+- fix(frontend): portal settings tooltips and drop duplicate notification settings
+
 ## 0.1.22 (2026-05-30)
 
 - feat: confirm before stopping a run or skipping a scheduled run
