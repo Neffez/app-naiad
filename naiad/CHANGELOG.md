@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.22 (2026-05-30)
+
+- feat: confirm before stopping a run or skipping a scheduled run
+
 ## 0.1.21 (2026-05-30)
 
 - feat: fall back to yesterday's recorded max temperature
