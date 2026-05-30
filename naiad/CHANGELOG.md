@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.14 (2026-05-30)
+
+- fix: history duplication, timezones, hero next run, factor display
+
 ## 0.1.12 (2026-05-30)
 
 - docs: drop 'optimized for KNX' — Naiad is hardware-agnostic via HA
