@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.19 (2026-05-30)
+
+- refactor: remove duplicate rain/temperature factor settings from Anlagenkonfiguration
+
 ## 0.1.17 (2026-05-30)
 
 - fix: ruff format system.py (collapse single-expr exec call)
