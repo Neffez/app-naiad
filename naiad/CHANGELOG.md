@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.26 (2026-05-30)
+
+- fix: move notify targets setting to notifications section
+- fix(frontend): keep frame-ancestors input from overflowing its card
+
 ## 0.1.25 (2026-05-30)
 
 - fix: resolve frontend ESLint errors and npm peer-dep conflict
