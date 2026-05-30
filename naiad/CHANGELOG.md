@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.17 (2026-05-30)
+
+- fix: ruff format system.py (collapse single-expr exec call)
+
 ## 0.1.16 (2026-05-30)
 
 - fix: dynamic season icon (sun in summer, snowflake in winter)
