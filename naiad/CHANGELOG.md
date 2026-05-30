@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.18 (2026-05-30)
+
+- feat: add per-target test notification button in notify target config
+
 ## 0.1.19 (2026-05-30)
 
 - refactor: remove duplicate rain/temperature factor settings from Anlagenkonfiguration
