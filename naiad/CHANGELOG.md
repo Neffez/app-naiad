@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.10 (2026-05-30)
+
+- fix(i18n): unify 'Ventil/Valve' to 'Zone' in the UI
+- fix(config): make zone assignment obvious; robust export with clipboard fallback
+
 ## 0.1.9 (2026-05-30)
 
 - fix: code-review quick wins (plan tz, week consistency, factor/duration bounds)
