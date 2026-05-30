@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5 (2026-05-30)
+
+- feat(config): searchable picker for notify targets
+
 ## 0.1.2
 
 - Add a `password` add-on option. Naiad keeps the app password env-only, and the
