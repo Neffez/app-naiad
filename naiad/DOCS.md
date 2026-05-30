@@ -1,6 +1,6 @@
 # Naiad — Home Assistant Add-on
 
-Naiad is a garden irrigation controller, optimized for KNX. It replaces the
+Naiad is a garden irrigation controller for Home Assistant. It replaces the
 irrigation logic that usually lives inside Home Assistant (Irrigation Unlimited,
 automations, pyscript, helpers, dashboard cards) with a single web app: schedules,
 weather-based factor adjustment, manual planning, history and a touch-friendly UI.
