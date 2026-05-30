@@ -1,7 +1,7 @@
 name: Naiad
 version: "0.1.11"
 slug: naiad
-description: Garden irrigation controller for Home Assistant, optimized for KNX
+description: Garden irrigation controller for Home Assistant
 url: https://github.com/Neffez/naiad
 # Naiad publishes a multi-arch app image; the add-on layers only the bootstrap on
 # top of it (see build.yaml), so the same image powers standalone and add-on.

@@ -1,7 +1,7 @@
 <div align="center">
   <img src="naiad/logo.png" alt="Naiad" width="420">
 
-  **Home Assistant add-on repository for Naiad — a garden irrigation controller, optimized for KNX.**
+  **Home Assistant add-on repository for Naiad — a garden irrigation controller.**
 </div>
 
 ---
