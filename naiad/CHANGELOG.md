@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.15 (2026-05-30)
+
+- fix: weather strip icons-only, season shows Summer/Winter
+
 ## 0.1.14 (2026-05-30)
 
 - fix: history duplication, timezones, hero next run, factor display
