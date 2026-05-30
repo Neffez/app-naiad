@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.20 (2026-05-30)
+
+- feat: friendly schedule picker (weekdays + times) instead of raw cron
+
 ## 0.1.18 (2026-05-30)
 
 - feat: add per-target test notification button in notify target config
