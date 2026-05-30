@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.21 (2026-05-30)
+
+- feat: fall back to yesterday's recorded max temperature
+- style: apply ruff format to test_factors.py
+- feat: irrigation UX fixes and improvements
+
 ## 0.1.20 (2026-05-30)
 
 - feat: friendly schedule picker (weekdays + times) instead of raw cron
