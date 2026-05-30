@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.25 (2026-05-30)
+
+- fix: resolve frontend ESLint errors and npm peer-dep conflict
+
 ## 0.1.24 (2026-05-30)
 
 - feat: remove emergency stop button from dashboard
