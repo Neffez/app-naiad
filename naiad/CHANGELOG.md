@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.11 (2026-05-30)
+
+- feat(notify): per-recipient categories + platform-aware quiet
+- feat(notify): watchdog push, evening reminder, configurable events + quiet
+
 ## 0.1.10 (2026-05-30)
 
 - fix(i18n): unify 'Ventil/Valve' to 'Zone' in the UI
