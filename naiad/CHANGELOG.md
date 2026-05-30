@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.24 (2026-05-30)
+
+- feat: remove emergency stop button from dashboard
+
 ## 0.1.23 (2026-05-30)
 
 - fix(frontend): portal settings tooltips and drop duplicate notification settings
