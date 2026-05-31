@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.11 (2026-05-31)
+
+- fix: alignment
+
 ## 0.2.10 (2026-05-31)
 
 - docs: update README.md
