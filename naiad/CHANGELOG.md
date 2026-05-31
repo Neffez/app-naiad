@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3 (2026-05-31)
+
+- feat: add login throttling (M-1) and skip runs at factor 0% (M-2)
+- fix: resolve low-risk review findings (rain-vs-paused, docs, design tokens)
+- docs: refresh code review and README against current implementation
+
 ## 0.2.1 (2026-05-31)
 
 - fix: use appropriate emojis
