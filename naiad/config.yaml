@@ -1,5 +1,5 @@
 name: Naiad
-version: "0.1.26"
+version: "0.1.27"
 slug: naiad
 description: Garden irrigation controller for Home Assistant
 url: https://github.com/Neffez/naiad
