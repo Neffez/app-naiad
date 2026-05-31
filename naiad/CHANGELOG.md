@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.28 (2026-05-31)
+
+- feat: add API endpoints to clear sequence overrides
+
 ## 0.1.27 (2026-05-31)
 
 - feat: add history deletion with confirmation and 30-day cleanup
