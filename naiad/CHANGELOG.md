@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.9 (2026-05-31)
+
+- fix: formatting
+
 ## 0.2.8 (2026-05-31)
 
 - fix: deleted zones will now also be removed from the sequence references
