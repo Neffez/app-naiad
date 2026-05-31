@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.27 (2026-05-31)
+
+- feat: add history deletion with confirmation and 30-day cleanup
+
 ## 0.1.26 (2026-05-30)
 
 - fix: move notify targets setting to notifications section
