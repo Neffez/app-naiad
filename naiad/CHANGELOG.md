@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0 (2026-05-31)
+
+- style: apply ruff format
+- feat: publish irrigation statistics to Home Assistant over MQTT
+
 ## 0.1.31 (2026-05-31)
 
 - feat: schedule and run individual zones, not just sequences
