@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.29 (2026-05-31)
+
+- test: fix peer dependency resolution for Vitest
+- test: add Vitest frontend test suite
+
 ## 0.1.28 (2026-05-31)
 
 - feat: add API endpoints to clear sequence overrides
