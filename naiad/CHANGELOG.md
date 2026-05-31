@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.31 (2026-05-31)
+
+- feat: schedule and run individual zones, not just sequences
+
 ## 0.1.30 (2026-05-31)
 
 - fix: remove unused type-ignore in history delete
