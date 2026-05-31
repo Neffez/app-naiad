@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.8 (2026-05-31)
+
+- fix: deleted zones will now also be removed from the sequence references
+
 ## 0.2.7 (2026-05-31)
 
 - feat: improved number fields
