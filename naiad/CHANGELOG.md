@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.13 (2026-05-31)
+
+- refactor: drop redundant i18n defaultValue fallbacks
+- fix: use English defaults for i18n fallback strings
+
 ## 0.2.12 (2026-05-31)
 
 - feat: show sensor inputs in adjustment tooltips
