@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.7 (2026-05-31)
+
+- feat: improved number fields
+
 ## 0.2.6 (2026-05-31)
 
 - fix: proper favicon
