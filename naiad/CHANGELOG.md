@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.6 (2026-05-31)
+
+- fix: proper favicon
+- feat: i18n for notifications, "en" is now default for language
+- fix: sort starlette imports to satisfy ruff I001
+- fix: add missing type annotations to _SPAStaticFiles.get_response
+
 ## 0.2.5 (2026-05-31)
 
 - fix: sort starlette imports to satisfy ruff I001
