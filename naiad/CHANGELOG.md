@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.30 (2026-05-31)
+
+- fix: remove unused type-ignore in history delete
+- feat: drag-and-drop reordering of dashboard sequence and zone cards
+
 ## 0.1.29 (2026-05-31)
 
 - test: fix peer dependency resolution for Vitest
