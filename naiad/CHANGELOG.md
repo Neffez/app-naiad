@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.10 (2026-05-31)
+
+- docs: update README.md
+
 ## 0.2.9 (2026-05-31)
 
 - fix: formatting
