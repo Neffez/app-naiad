@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 (2026-05-31)
+
+- fix: use appropriate emojis
+
 ## 0.2.0 (2026-05-31)
 
 - style: apply ruff format
