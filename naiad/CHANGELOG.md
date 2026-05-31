@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.12 (2026-05-31)
+
+- feat: show sensor inputs in adjustment tooltips
+- feat: dashboard UX improvements
+
 ## 0.2.11 (2026-05-31)
 
 - fix: alignment
