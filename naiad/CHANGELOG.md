@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.11 (2026-06-01)
+
+- docs: mark M-3 progress in code review (query keys, Config split, history)
+- refactor(frontend): fetch config once for the history table
+- refactor(frontend): split Config.tsx into cohesive modules
+- refactor(frontend): centralize React Query keys
+- docs: rewrite code review with findings and work log
+- refactor: remove dead driver code, bound HA fan-out, English MQTT names
+- fix: close forward_header auth fail-open and config-import reload race
+
 ## 0.5.10 (2026-06-01)
 
 - feat: expose notification queue_max_hours in the config UI
