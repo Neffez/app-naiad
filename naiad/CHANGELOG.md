@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.5 (2026-06-01)
+
+- add mobile showcase
+
 ## 0.5.4 (2026-06-01)
 
 - Added screenshots and gif for showcase
