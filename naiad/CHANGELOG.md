@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.4 (2026-06-01)
+
+- fix: bound upcoming-runs list height to viewport so it scrolls
+
 ## 0.4.3 (2026-06-01)
 
 - chore: add CODEOWNERS requiring owner review
