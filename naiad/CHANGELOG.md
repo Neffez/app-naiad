@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 (2026-06-01)
+
+- feat: allow parallel runs
+
 ## 0.4.5 (2026-06-01)
 
 - feat: improve dashboard viewing run time and upcoming runs
