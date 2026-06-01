@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.5 (2026-06-01)
+
+- fix: keep manual adjustment editor open while using steppers
+
 ## 0.3.4 (2026-06-01)
 
 - fix: avoid nested scroll trap for upcoming runs on mobile
