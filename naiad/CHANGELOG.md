@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.9 (2026-06-01)
+
+- fix: don't ignore README.md in .dockerignore (no inline comments)
+
 ## 0.5.6 (2026-06-01)
 
 - Enhance README with image and introduction update
