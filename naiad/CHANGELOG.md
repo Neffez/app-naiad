@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.12 (2026-06-01)
+
+- refactor(frontend): remove unused EmergencyStop component
+- docs: mark Low-item cleanup (L-4/L-5/L-6/L-7 a11y) in code review
+- a11y(frontend): give icon-only buttons accessible names
+- refactor(backend): throttle token writes, dedupe master switch + timestamp parsing
+
 ## 0.5.11 (2026-06-01)
 
 - docs: mark M-3 progress in code review (query keys, Config split, history)
