@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 (2026-06-01)
+
+- feat: manual adjustment override on dashboard
+
 ## 0.3.0 (2026-06-01)
 
 - ci: run frontend vitest tests on every CI pass
