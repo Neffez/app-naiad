@@ -17,3 +17,19 @@ jobs:
         uses: frenck/action-addon-linter@v2
         with:
           path: ./naiad
+
+  assets:
+    name: Brand assets in sync with logo.svg
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install renderer dependencies
+        run: pip install cairosvg Pillow
+
+      - name: Check icon.png / logo.png match logo.svg
+        run: python render_assets.py --check
