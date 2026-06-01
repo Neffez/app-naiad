@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import io
 import re
+import sys
 
 import cairosvg
 from PIL import Image
@@ -54,20 +55,22 @@ def _render(svg_text: str, width: int, height: int) -> Image.Image:
     return Image.open(io.BytesIO(png_bytes)).convert("RGBA")
 
 
-def _flatten(rgba: Image.Image) -> Image.Image:
-    """Composite onto the dark brand background and drop the alpha channel."""
+def _flatten(rgba: Image.Image) -> bytes:
+    """Composite onto the dark brand background, drop alpha, return PNG bytes."""
     bg = Image.new("RGBA", rgba.size, (*DARK, 255))
-    return Image.alpha_composite(bg, rgba).convert("RGB")
+    flat = Image.alpha_composite(bg, rgba).convert("RGB")
+    buf = io.BytesIO()
+    flat.save(buf, "PNG", optimize=True)
+    return buf.getvalue()
 
 
-def render_logo(svg_text: str) -> None:
+def logo_png(svg_text: str) -> bytes:
     vbw, vbh = _svg_size(svg_text)
     width, height = round(vbw * LOGO_SCALE), round(vbh * LOGO_SCALE)
-    _flatten(_render(svg_text, width, height)).save(LOGO_PNG, "PNG", optimize=True)
-    print(f"wrote {LOGO_PNG} ({width}x{height})")
+    return _flatten(_render(svg_text, width, height))
 
 
-def render_icon(svg_text: str) -> None:
+def icon_png(svg_text: str) -> bytes:
     # Drop the wordmark and reframe to a square viewBox tightly around the mark.
     icon_svg = re.sub(r"<text\b.*?</text>", "", svg_text, flags=re.DOTALL)
     minx, miny, maxx, maxy = MARK_BOX
@@ -75,16 +78,51 @@ def render_icon(svg_text: str) -> None:
     side = max(maxx - minx, maxy - miny) + 2 * ICON_PAD
     vb = f"{cx - side / 2} {cy - side / 2} {side} {side}"
     icon_svg = re.sub(r'viewBox\s*=\s*"[^"]*"', f'viewBox="{vb}"', icon_svg, count=1)
-    _flatten(_render(icon_svg, ICON_SIZE, ICON_SIZE)).save(ICON_PNG, "PNG", optimize=True)
-    print(f"wrote {ICON_PNG} ({ICON_SIZE}x{ICON_SIZE})")
+    return _flatten(_render(icon_svg, ICON_SIZE, ICON_SIZE))
 
 
-def main() -> None:
+# Each target PNG and the function that produces its bytes from the SVG.
+TARGETS = ((LOGO_PNG, logo_png), (ICON_PNG, icon_png))
+
+
+def main(argv: list[str] | None = None) -> int:
+    argv = sys.argv[1:] if argv is None else argv
+    check = "--check" in argv
+
     with open(SVG, encoding="utf-8") as fh:
         svg_text = fh.read()
-    render_logo(svg_text)
-    render_icon(svg_text)
+
+    stale = []
+    for path, build in TARGETS:
+        data = build(svg_text)
+        if check:
+            # Compare decoded pixels, not raw bytes: PNG is lossless, so this
+            # ignores harmless encoder/zlib differences across environments.
+            fresh = Image.open(io.BytesIO(data))
+            try:
+                committed = Image.open(path)
+                committed.load()
+            except FileNotFoundError:
+                committed = None
+            if committed is None or committed.tobytes() != fresh.tobytes():
+                stale.append(path)
+                print(f"OUT OF DATE: {path}")
+            else:
+                print(f"ok: {path}")
+        else:
+            with open(path, "wb") as fh:
+                fh.write(data)
+            print(f"wrote {path}")
+
+    if check and stale:
+        print(
+            "\nPNG assets are out of date with logo.svg. "
+            "Run `python render_assets.py` and commit the result.",
+            file=sys.stderr,
+        )
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
