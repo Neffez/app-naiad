@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.3 (2026-06-01)
+
+- chore: add CODEOWNERS requiring owner review
+
 ## 0.4.1 (2026-06-01)
 
 - fix: let upcoming-runs list fill available card height before scrolling
