@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.4 (2026-06-01)
+
+- fix: avoid nested scroll trap for upcoming runs on mobile
+- feat: make upcoming runs list scrollable on vertical overflow
+
 ## 0.3.2 (2026-06-01)
 
 - feat: make sequence card accent colors configurable
