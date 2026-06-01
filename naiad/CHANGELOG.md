@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 (2026-06-01)
+
+- feat: make sequence card accent colors configurable
+
 ## 0.3.1 (2026-06-01)
 
 - feat: manual adjustment override on dashboard
