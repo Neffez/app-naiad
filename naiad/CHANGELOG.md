@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 (2026-06-01)
+
+- ci: run frontend vitest tests on every CI pass
+
 ## 0.2.13 (2026-05-31)
 
 - refactor: drop redundant i18n defaultValue fallbacks
