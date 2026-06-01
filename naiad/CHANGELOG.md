@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.7 (2026-06-01)
+
+- fix: keep manual adjustment editor open while using steppers
+
 ## 0.3.6 (2026-06-01)
 
 - fix: keep manual adjustment editor open while using steppers
