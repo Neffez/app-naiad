@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.6 (2026-06-01)
+
+- Enhance README with image and introduction update
+
 ## 0.5.5 (2026-06-01)
 
 - add mobile showcase
