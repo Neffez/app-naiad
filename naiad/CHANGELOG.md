@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.2 (2026-06-01)
+
+- Add release badge to README
+
 ## 0.5.0 (2026-06-01)
 
 - feat: allow parallel runs
