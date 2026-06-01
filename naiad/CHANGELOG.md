@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 (2026-06-01)
+
+- fix: let upcoming-runs list fill available card height before scrolling
+
 ## 0.4.0 (2026-06-01)
 
 - fix: keep manual adjustment editor open while using steppers
