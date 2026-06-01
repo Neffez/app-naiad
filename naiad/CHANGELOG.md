@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.3 (2026-06-01)
+
+- fix: hardcoded german strings
+
 ## 0.5.2 (2026-06-01)
 
 - Add release badge to README
