@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.5 (2026-06-01)
+
+- feat: improve dashboard viewing run time and upcoming runs
+- feat: add zone live status to dashboard
+
 ## 0.4.4 (2026-06-01)
 
 - fix: bound upcoming-runs list height to viewport so it scrolls
