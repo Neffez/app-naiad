@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.10 (2026-06-01)
+
+- feat: expose notification queue_max_hours in the config UI
+- feat: persist the notification queue so it survives restarts
+- feat: queue notifications during HA outages and re-deliver on reconnect
+
 ## 0.5.9 (2026-06-01)
 
 - fix: don't ignore README.md in .dockerignore (no inline comments)
