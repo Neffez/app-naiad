@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.18 (2026-06-02)
+
+- fix: missing import, added test
+
 ## 0.5.17 (2026-06-02)
 
 - fix: several codereview fixes
