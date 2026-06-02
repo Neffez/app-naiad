@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.13 (2026-06-02)
+
+- fix(a11y): address code-review findings in dialog/toast/infotip
+- a11y(frontend): add accessibility across components, pages and dialogs
+
 ## 0.5.12 (2026-06-01)
 
 - refactor(frontend): remove unused EmergencyStop component
