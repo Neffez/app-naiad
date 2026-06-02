@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.16 (2026-06-02)
+
+- fix: ci and several codereview fixes
+
 ## 0.5.15 (2026-06-02)
 
 - feat: per-zone staircase-timer support and durable valve-close retry
