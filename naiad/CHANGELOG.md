@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.17 (2026-06-02)
+
+- fix: several codereview fixes
+
 ## 0.5.16 (2026-06-02)
 
 - fix: ci and several codereview fixes
