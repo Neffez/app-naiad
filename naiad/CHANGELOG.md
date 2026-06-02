@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.19 (2026-06-02)
+
+- fix: fix ruff formatting
+
 ## 0.5.18 (2026-06-02)
 
 - fix: missing import, added test
