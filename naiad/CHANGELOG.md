@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.14 (2026-06-02)
+
+- feat(frontend): surface query-load errors + tokenize repeated rgba literals (L-7)
+
 ## 0.5.13 (2026-06-02)
 
 - fix(a11y): address code-review findings in dialog/toast/infotip
