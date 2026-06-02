@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.22 (2026-06-02)
+
+- feat: make tomorrow's rain peak opt-in via peak_tomorrow setting
+- feat: scale rain factor to the day's peak forecast, not the latest reading
+
 ## 0.5.21 (2026-06-02)
 
 - fix: fix test
