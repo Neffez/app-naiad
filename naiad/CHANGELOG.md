@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.15 (2026-06-02)
+
+- feat: per-zone staircase-timer support and durable valve-close retry
+- docs: added AGENT.md
+
 ## 0.5.14 (2026-06-02)
 
 - feat(frontend): surface query-load errors + tokenize repeated rgba literals (L-7)
