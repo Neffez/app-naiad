@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.2 (2026-06-03)
+
+- refactor: make OpenAPI the frontend API contract source
+
 ## 0.6.1 (2026-06-03)
 
 - fix: improve ci, do not track static files
