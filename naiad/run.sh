@@ -31,6 +31,15 @@ if [ -n "${PASSWORD}" ]; then
     echo "[naiad] app password configured from add-on options"
 fi
 
+# mqtt_password → MQTT_PASSWORD. Naiad keeps the MQTT broker password out of its
+# database (env-only), so this option is how you set it inside the add-on. Only
+# relevant when the MQTT statistics bridge is enabled in Naiad's UI.
+MQTT_PASSWORD="$(read_option mqtt_password "")"
+if [ -n "${MQTT_PASSWORD}" ]; then
+    export MQTT_PASSWORD
+    echo "[naiad] MQTT password configured from add-on options"
+fi
+
 echo "[naiad] starting Home Assistant add-on (LOG_LEVEL=${LOG_LEVEL})"
 
 # WORKDIR /app is inherited from the base image, where the naiad package lives.

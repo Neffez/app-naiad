@@ -38,8 +38,14 @@ homeassistant_api: true
 options:
   log_level: info
   password: ""
+  mqtt_password: ""
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   # App password for direct-port access. Plaintext or a bcrypt hash ($2b$...).
   # The sidebar (ingress) needs no password; this protects http://<haos-ip>:5195.
   password: password?
+  # Password for the MQTT broker used by the statistics bridge. Naiad keeps it
+  # env-only (out of its database), so this option is how you set it in the add-on.
+  # Only needed when the MQTT bridge is enabled in Naiad's UI and the broker
+  # requires authentication.
+  mqtt_password: password?

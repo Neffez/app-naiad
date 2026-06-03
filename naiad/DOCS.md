@@ -57,6 +57,7 @@ the database on the `/data` volume.
 |--------|---------|-------------|
 | `log_level` | `info` | Backend log verbosity: `trace`, `debug`, `info`, `notice`, `warning`, `error`, `fatal`. |
 | `password` | _(empty)_ | App password for **direct-port** access (`http://<haos-ip>:5195`). Plaintext or a bcrypt hash (`$2b$…`). The sidebar (ingress) is authenticated by Home Assistant and needs no password. Leave empty to keep the direct port locked. Naiad stores the password env-only, so this option is the way to set it inside the app. |
+| `mqtt_password` | _(empty)_ | Password for the MQTT broker used by Naiad's statistics bridge. Only needed when you enable MQTT in Naiad's UI and the broker requires authentication. Naiad keeps this secret env-only (out of its database), so this option is the way to set it inside the app. The broker host, port, username and base topic are configured in Naiad's UI. |
 
 On a first start with an empty database, Naiad comes up zero-config: open the UI
 and add your sensors, zones and sequences. If a `config.yaml` is present in the
