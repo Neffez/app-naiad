@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.24 (2026-06-03)
+
+- feat: add water balance rain mode and MQTT factor sensors`
+
 ## 0.5.22 (2026-06-02)
 
 - feat: make tomorrow's rain peak opt-in via peak_tomorrow setting
