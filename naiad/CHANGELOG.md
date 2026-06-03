@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.25 (2026-06-03)
+
+- fix: formatting
+
 ## 0.5.24 (2026-06-03)
 
 - feat: add water balance rain mode and MQTT factor sensors`
