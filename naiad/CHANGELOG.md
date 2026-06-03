@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1 (2026-06-03)
+
+- fix: improve ci, do not track static files
+
 ## 0.6.0 (2026-06-03)
 
 - fix: formatting
