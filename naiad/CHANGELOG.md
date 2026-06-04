@@ -1,5 +1,70 @@
 # Changelog
 
+## 0.6.5 (2026-06-04)
+
+- refactor: make OpenAPI the frontend API contract source
+- fix: improve ci, do not track static files
+- fix: formatting
+- feat: add water balance rain mode and MQTT factor sensors`
+- feat: confirm today's rain peak by peak-timing, not just 'rained today'
+- feat: gate today's rain peak on the binary rain sensor (opt-in)
+- perf: skip cleanup lock in retry_pending_closes when nothing is pending
+- fix: handle clean HA websocket close and notify on dropped cron run
+- fix: restore normal staircase re-trigger interval after a failure
+- feat: make tomorrow's rain peak opt-in via peak_tomorrow setting
+- feat: scale rain factor to the day's peak forecast, not the latest reading
+- fix: fix test
+- fix: fix mypy
+- fix: fix ruff formatting
+- fix: missing import, added test
+- fix: several codereview fixes
+- fix: ci and several codereview fixes
+- feat: per-zone staircase-timer support and durable valve-close retry
+- docs: added AGENT.md
+- feat(frontend): surface query-load errors + tokenize repeated rgba literals (L-7)
+- fix(a11y): address code-review findings in dialog/toast/infotip
+- a11y(frontend): add accessibility across components, pages and dialogs
+- refactor(frontend): remove unused EmergencyStop component
+- docs: mark Low-item cleanup (L-4/L-5/L-6/L-7 a11y) in code review
+- a11y(frontend): give icon-only buttons accessible names
+- refactor(backend): throttle token writes, dedupe master switch + timestamp parsing
+- docs: mark M-3 progress in code review (query keys, Config split, history)
+- refactor(frontend): fetch config once for the history table
+- refactor(frontend): split Config.tsx into cohesive modules
+- refactor(frontend): centralize React Query keys
+- docs: rewrite code review with findings and work log
+- refactor: remove dead driver code, bound HA fan-out, English MQTT names
+- fix: close forward_header auth fail-open and config-import reload race
+- feat: expose notification queue_max_hours in the config UI
+- feat: persist the notification queue so it survives restarts
+- feat: queue notifications during HA outages and re-deliver on reconnect
+- fix: don't ignore README.md in .dockerignore (no inline comments)
+- move screenshots to the bottom
+- docs: add Screenshots showcase section to README
+- build: add .dockerignore to keep docs/design assets out of the image context
+- Enhance README with image and introduction update
+- add mobile showcase
+- Added screenshots and gif for showcase
+- fix: hardcoded german strings
+- Add release badge to README
+- feat: improve next run list, only show upcoming runs of maximum of 2 days (today and next day a run is scheduled)
+- feat: allow parallel runs
+- feat: improve dashboard viewing run time and upcoming runs
+- feat: add zone live status to dashboard
+- fix: bound upcoming-runs list height to viewport so it scrolls
+- fix: let upcoming-runs list fill available card height before scrolling
+- fix: keep manual adjustment editor open while using steppers
+- fix: avoid nested scroll trap for upcoming runs on mobile
+- feat: make upcoming runs list scrollable on vertical overflow
+- remove redundant line
+- feat: make sequence card accent colors configurable
+- feat: manual adjustment override on dashboard
+- refactor: drop redundant i18n defaultValue fallbacks
+- fix: use English defaults for i18n fallback strings
+- feat: show sensor inputs in adjustment tooltips
+- feat: dashboard UX improvements
+- fix: alignment
+
 ## 0.6.4 (2026-06-04)
 
 - refactor: make OpenAPI the frontend API contract source
