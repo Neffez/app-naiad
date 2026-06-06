@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.7 (2026-06-06)
+
+- refactor: address code review of the settings rework
+- feat(settings): reset watering factors to their base defaults
+- refactor(frontend): unify config & settings into a sectioned settings area
+
 ## 0.6.6 (2026-06-04)
 
 ## 0.6.5 (2026-06-04)
