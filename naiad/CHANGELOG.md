@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.11 (2026-06-10)
+
+- add mqtt controls
+
 ## 0.6.10 (2026-06-10)
 
 - added codereview.md and future_improvements.md
