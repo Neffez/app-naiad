@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.10 (2026-06-10)
+
+- added codereview.md and future_improvements.md
+- added parity tests
+- several fixes and improvements, added wind-abort after configurable time
+- make npm step more robust
+
 ## 0.6.9 (2026-06-10)
 
 - fixed several bugs and refactoring
