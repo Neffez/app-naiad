@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.8 (2026-06-10)
+
+- fixed several bugs and refactoring
+
 ## 0.6.7 (2026-06-06)
 
 - refactor: address code review of the settings rework
