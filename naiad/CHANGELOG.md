@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.13 (2026-06-11)
+
+- feat: add quick wins — frost lockout, cistern guard, cost display, planner week view, PWA
+
 ## 0.6.12 (2026-06-11)
 
 - feat: add decision log answering why a run watered or was skipped
