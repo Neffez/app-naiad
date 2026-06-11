@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.12 (2026-06-11)
+
+- feat: add decision log answering why a run watered or was skipped
+
 ## 0.6.11 (2026-06-10)
 
 - add mqtt controls
