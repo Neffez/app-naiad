@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0 (2026-06-13)
+
+- feat: add ET₀ soil water balance as a third rain mode (et0)
+
 ## 0.6.13 (2026-06-11)
 
 - feat: add quick wins — frost lockout, cistern guard, cost display, planner week view, PWA
