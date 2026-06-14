@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2026-06-14)
+
+- fix: resolve remaining et0_zonal review findings (#3 #4 #5 #6 #9)
+- fix: address et0_zonal review findings (#1 #2 #7 #8)
+- feat: derive per-zone runtime from the ET₀ deficit (et0_zonal stage 3)
+- feat: add per-zone ET₀ soil water balance as the et0_zonal rain mode
+
 ## 0.7.0 (2026-06-13)
 
 - feat: add ET₀ soil water balance as a third rain mode (et0)
