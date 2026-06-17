@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6 (2026-06-17)
+
+- build(deps-dev): bump vite
+
 ## 1.0.5 (2026-06-17)
 
 - test: restore app routes after lifespan smoke test
