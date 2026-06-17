@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 (2026-06-17)
+
+- build(deps): bump starlette
+
 ## 1.0.3 (2026-06-17)
 
 - fix: pin setup-uv action tag
