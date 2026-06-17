@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.5 (2026-06-17)
+
+- test: restore app routes after lifespan smoke test
+
 ## 1.0.4 (2026-06-17)
 
 - build(deps): bump starlette
