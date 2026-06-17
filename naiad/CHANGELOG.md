@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 (2026-06-17)
+
+- fix: lock backend CI dependencies
+
 ## 1.0.0 (2026-06-14)
 
 - fix: resolve remaining et0_zonal review findings (#3 #4 #5 #6 #9)
