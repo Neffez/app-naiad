@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 (2026-06-17)
+
+- fix: pin setup-uv action tag
+
 ## 1.0.1 (2026-06-17)
 
 - fix: lock backend CI dependencies
