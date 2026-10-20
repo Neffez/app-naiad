@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.8 (2026-10-20)
+
+- fix: drop out-of-tree readme from backend package metadata
+- feat: per-target notification switch; no reminders for inactive or skipped runs
+
 ## 1.0.7 (2026-06-20)
 
 - build(deps): bump undici
