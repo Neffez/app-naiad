@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.10 (2026-10-30)
+
+- style: reformat status tests so ruff format check passes
+
 ## 1.0.8 (2026-10-20)
 
 - fix: drop out-of-tree readme from backend package metadata
