@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.11 (2026-11-20)
+
+- docs: record 2026-11 code review; fix README architecture notes
+- build: install locked deps in the image; pre-commit uses lockfile tools
+- fix(frontend): planner Enter submit, history trigger labels, dirty markers
+- fix: backend bugs found in code review
+
 ## 1.0.10 (2026-10-30)
 
 - style: reformat status tests so ruff format check passes
