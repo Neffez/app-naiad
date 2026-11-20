@@ -2,7 +2,13 @@
 # the architecture-matching variant from the manifest, so a single FROM covers
 # amd64 and aarch64. The add-on layers only the Supervisor bootstrap on top, so one
 # image powers both the standalone container and the Home Assistant add-on.
-FROM ghcr.io/neffez/naiad:latest
+#
+# Pinned to the add-on version (the Supervisor passes it as BUILD_VERSION; the
+# release workflow keeps add-on and app versions in lockstep). With `:latest` the
+# installed app version depended on when the add-on was (re)built, and a cached
+# `latest` layer could keep serving an old app after an add-on update.
+ARG BUILD_VERSION=latest
+FROM ghcr.io/neffez/naiad:${BUILD_VERSION}
 
 # Persist the SQLite database (and an optional config.yaml seed) on the mapped
 # /data volume the Supervisor provides.
