@@ -4,7 +4,7 @@ slug: naiad
 description: Garden irrigation controller for Home Assistant
 url: https://github.com/Neffez/naiad
 # Naiad publishes a multi-arch app image; the add-on layers only the bootstrap on
-# top of it (see build.yaml), so the same image powers standalone and add-on.
+# top of it (see Dockerfile), so the same image powers standalone and add-on.
 arch:
   - amd64
   - aarch64

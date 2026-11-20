@@ -81,6 +81,37 @@ def icon_png(svg_text: str) -> bytes:
     return _flatten(_render(icon_svg, ICON_SIZE, ICON_SIZE))
 
 
+def logo_text_boxes(svg_text: str) -> list[tuple[int, int, int, int]]:
+    """Pixel boxes of the wordmark text in logo.png, for the --check comparison.
+
+    The wordmark uses a font-family fallback chain, so how it rasterises depends
+    on the fonts installed on the machine (on Linux it resolves to whatever
+    fontconfig picks for sans-serif, which changes with runner image updates).
+    Comparing it pixel-exactly made the check fail without any change to
+    logo.svg. The text boxes are therefore masked during the comparison; the
+    mark (drop, waves, grass) is still compared exactly, and icon.png contains
+    no text at all.
+    """
+    vbw, _vbh = _svg_size(svg_text)
+    boxes = []
+    for m in re.finditer(r"<text\b([^>]*)>", svg_text):
+        attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', m.group(1)))
+        x, y, size = float(attrs["x"]), float(attrs["y"]), float(attrs["font-size"])
+        # Generous bounds: from just left of the anchor to the right edge, from
+        # above the cap height to below the descenders.
+        left, top = x - 0.2 * size, y - 1.2 * size
+        right, bottom = vbw, y + 0.4 * size
+        boxes.append(tuple(round(v * LOGO_SCALE) for v in (left, top, right, bottom)))
+    return boxes
+
+
+def _masked(img: Image.Image, boxes: list[tuple[int, int, int, int]]) -> bytes:
+    img = img.convert("RGB")
+    for box in boxes:
+        img.paste(DARK, box)
+    return img.tobytes()
+
+
 # Each target PNG and the function that produces its bytes from the SVG.
 TARGETS = ((LOGO_PNG, logo_png), (ICON_PNG, icon_png))
 
@@ -104,7 +135,12 @@ def main(argv: list[str] | None = None) -> int:
                 committed.load()
             except FileNotFoundError:
                 committed = None
-            if committed is None or committed.tobytes() != fresh.tobytes():
+            boxes = logo_text_boxes(svg_text) if path == LOGO_PNG else []
+            if (
+                committed is None
+                or committed.size != fresh.size
+                or _masked(committed, boxes) != _masked(fresh, boxes)
+            ):
                 stale.append(path)
                 print(f"OUT OF DATE: {path}")
             else:
